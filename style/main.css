@@ -10,3 +10,41 @@ body {
     padding: 10px;
     text-align: center;
 }
+
+#menu {
+    background: lightpink;
+    padding: 5px;
+}
+
+#menu a{
+    color: pink;
+    text-decoration: none;
+    margin:  0 10px;
+}
+
+#menu a :hover {
+    color: white;
+}
+
+#content {
+    background: white;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+#footer {
+    background: pink;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+table {
+    width: 80%;
+    margin: 10PX 0;
+}
+
+img { 
+    border: 2px white;
+}
