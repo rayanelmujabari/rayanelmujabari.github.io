@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTTP Research Homepage</title>
+    </head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            color: pink;
+            background-color:white;
+        }
+
+        .header {
+            background-color: pink;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .menu {
+            background-color: lightpink;
+            padding: 10px;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .menu a:hover {
+            color: powderblue; 
+        }
+        
+        .content {
+            background-color: white;
+            padding: 10px;
+            margin-top: 15px;
+        }
+
+        .footer {
+            background-color: pink;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1> HTTP Research Project </h1>
+    </div>
+
+    <div class="menu">
+        <a href="index.html">Home</a>
+        <a href="role.html">HTTP's Role</a>
+        <a href="past.html">HTTP's Past</a>
+        <a href="present.html">HTTP's Present</a>
+        <a href="future.html">HTTP's future</a>
+        <a href="ref.html">Refrences</a>
+    </div>
+</body>
+
+<div class="content">
+    <h3> The history and early versions of HTTP.</h3>
+    <p> 
+HTTP has gone through many changes over the years. It was first created by Sir Tim Berners-Lee in 1989. The earliest version of HTTP .09 was officially introduced in 1991. It was very simple with simple commands that only held the GET method and returned HTML with no status codes or headers (Berners-Lee, 1989). It mainly was used for document retrieval. The creation of HTTP 1.0 in 1996 introduced features like request/response headers, status codes (ex: 404 Not Found), and supported different content types like TCP (Transmission Control Protocol) connections for every request which slowed down its performance because of having to open a new one after each request (Fielding et al., 1999). These were all important features that became the basis of web communication. The release of HTTP 1.1 in 1997, then later revised in 1999 marked key improvements with stable connections, large transfers, and a host header allowing virtual hosting (Fielding et al., 1999). In HTTP 1.1 there were many issues with dealing with modern web traffic. Its biggest issue was the struggle to handle multiple requests without crashing (Nygren et al., 2010). In the 2010’s the biggest contributor of the modernization of HTTP was google. 
+</p>
+
+<h3>HTTP in the early 2010s</h3>
+<p>
+    In the early 2010s Google developed SPDY which directly influenced HTTP 2 with its features like binary framing, multiplexing, header compression, and server push features that dramatically improved web performance (Belshe et al., 2015). HTTP 2, adopted a binary framing layer, multiplexing, and server push while maintaining compatibility with HTTP 1.1, marking a major leap forward in web performance (Belshe et al., 2015). Google also continued with renovating with QUIC (Quick UDP Internet Connections), first made in 2013, which focused on TCP's (Transmission Control Protocol) restrictions by using UDP (User Datagram Protocol) adding encryption at the transport layer, ultimately forming the basis for HTTP/3 (Langley et al., 2017).  The adjustment of HTTP 3 in 2022 represented another pattern shift, moving away from TCP (Transmission Control Protocol) entirely in favor of QUIC (Quick UDP Internet Connections) to reduce inactivity and improve performance on unreliable networks (Bishop, 2022).
+</p>
+
+<h3> How was it changing? </h3>
+<p>
+     Throughout its evolution, HTTP has been designed by the changing needs of the web, from document retrieval to complex applications, with each version addressing the limitations of its past versions while maintaining the protocol's ultimate values of simplicity and extensibility. The development of HTTP has been guided by the Internet Engineering Task Force (IETF) and World Wide Web Consortium (W3C), with significant contributions from browser vendors, web companies, and researchers, ensuring its continued relevance as the foundation of web communication (Nottingham, 2020).
+</p>
+
+<div class="footer">
+    <p>This is a class project for IT3203. Visit the <a href="https://ksuweb.github.io/IT3203/" style="color:white;">course website</a>.</p>
+</div>
+</body>
+</html>
