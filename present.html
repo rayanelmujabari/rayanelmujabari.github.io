@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTTP Research Homepage</title>
+    </head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            color: pink;
+            background-color:white;
+        }
+
+        .header {
+            background-color: pink;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .menu {
+            background-color: lightpink;
+            padding: 10px;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .menu a:hover {
+            color: powderblue; 
+        }
+        
+        .content {
+            background-color: white;
+            padding: 10px;
+            margin-top: 15px;
+        }
+
+        .footer {
+            background-color: pink;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1> HTTP Research Project </h1>
+    </div>
+
+    <div class="menu">
+        <a href="index.html">Home</a>
+        <a href="role.html">HTTP's Role</a>
+        <a href="past.html">HTTP's Past</a>
+        <a href="present.html">HTTP's Present</a>
+        <a href="future.html">HTTP's future</a>
+        <a href="ref.html">Refrences</a>
+    </div>
+</body>
+
+<div class="content">
+    <h3> What has been happening with HTTP recently?</h3>
+    <p> 
+As of 2024, HTTP continues to serve as the backbone of web communication, with HTTP 2 and HTTP 3 now controlling modern implementations while HTTP 1.1 remains widely supported for backward compatibility. HTTP 2 is used by approximately 60% of all websites as the main protocol, offering major performance benefits through multiplexing, header compression, and server push capabilities (W3Techs, 2024). 
+</p>
+
+<h3>HTTP 3's introduction</h3>
+<p>
+The most recent version of HTTP 3 left TCP (Transmission Control Protocol) all together and started using (Quick UDP Internet Connections), a UDP (User Datagram Protocol) based protocol made by Google that improved things like security with necessary TLS (Transport Layer Security) and a much better performance on unreliable networks (Iyengar & Thomson, 2021). HTTP 3, standardized in 2022 in RFC 9114, has seen fast adoption with nearly 30% of websites now supporting QUIC (Quick UDP Internet Connections) transport, particularly among major platforms like Google, Facebook, and Cloudflare, which reported 15-20% faster page loads and improved reliability on unstable networks (Belson et al., 2023), (Kempf, 2024). 
+</p>
+
+<h3> How was it still changing? </h3>
+<p>
+However, throughout history HTTP has changed to meet the demands of the modern web. From document retrieval, dynamic applications, or real time communications HTTPS (HTTP Secure) is becoming the standard for secure web traffic (Rescorla, 2018). HTTPS’ development has been led by many teams including the IETF (Internet Engineering Task Force) and the W3C (World Wide Web Consortium), with major contributions from companies like Google, Mozilla, and Cloudflare. Companies like the ones listed ensure that HTTP remains the main protocol of web communications, even though there are alternatives (Bishop, 2022).
+</p>
+
+<div class="footer">
+    <p>This is a class project for IT3203. Visit the <a href="https://ksuweb.github.io/IT3203/" style="color:white;">course website</a>.</p>
+</div>
+</body>
+</html>
