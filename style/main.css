@@ -21,7 +21,7 @@ body {
     text-decoration: none;
     margin:  0 10px;
 }
-
+/* How i made the hover blue on my menu */
 #menu a :hover {
     color: white;
 }
@@ -31,7 +31,7 @@ body {
     padding: 15px;
     margin-top: 10px;
 }
-
+/* TCustomized my footer background pink and made the link white */
 #footer {
     background: pink;
     color: white;
