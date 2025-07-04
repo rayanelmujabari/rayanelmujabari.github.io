@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>HTTP Research Homepage</title>
-    <!-- Title staying consitant -->
-    </head>
-    <!-- style, how i wanted everything to look, even the hover feature -->
-    <style>
+    <!-- forgot meta in first milestone -->
+     <meta charset="UTF-8">
+     <!-- I am making sure the website fits different devices. I found this on w3 schools. -->
+     <meta name="viewport" content=" width= device-width, initial-scale=1.0">
+     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
@@ -37,7 +38,7 @@
         
         .content {
             background-color: white;
-            padding: 10px;
+            padding: 20px;
             margin-top: 15px;
         }
 
@@ -51,14 +52,16 @@
         img {
             max-width: 100%;
             height: auto;
+            margin-top: 20px;
         }
-    </style>
-</head>
-<body>
+        </style>
+        </head>
+        <body>
     <div class="header">
-        <h1> HTTP Research Project </h1>
+        <!-- Header -->
+        <h1> HTTP's Role </h1>
     </div>
-<!-- my menu at the top -->
+
     <div class="menu">
         <a href="index.html">Home</a>
         <a href="role.html">HTTP's Role</a>
@@ -68,19 +71,18 @@
         <a href="quiz.html">Quiz</a>
         <a href="ref.html">Refrences</a>
     </div>
-</body>
-
-<div class="content">
-    <h3> WHat does HTTP do?</h3>
-    <!-- Paragraph-->
-    <p> 
-HTTP is stateless by default, each request is independent, however tools like cookies help gather data that may be useful (Barth, 2011). It also supports secure connections between the client and the server. Data is encrypted using TLS (Transport Layer Security) / SSL (Secure Sockets Layer) preventing any issues during transit. Encryption and Authentication are both key structures in TLS (Transport Layer Security) / SSL (Secure Sockets Layer) protocol (Developers, HTTP: MDN). HTTP also provides mechanisms for identifying and retrieving web resources through URI (Uniform Resource Identifiers) (Berners-Lee et al., 2005).
-</p>
-<!-- My image with the correct size -->
-<img src="images/HTTP.jpg" alt="HTTP (Rubin, 2018)">
-
-<div class="footer">
-    <p>This is a class project for IT3203. Visit the <a href="https://ksuweb.github.io/IT3203/" style="color:white;">course website</a>.</p>
-</div>
+    
+    <div class="content">
+        <h3> WHat does HTTP do?</h3>
+        <!-- Paragraph-->
+         <p>
+            HTTP is stateless by default, each request is independent, however tools like cookies help gather data that may be useful (Barth, 2011). It also supports secure connections between the client and the server. Data is encrypted using TLS (Transport Layer Security) / SSL (Secure Sockets Layer) preventing any issues during transit. Encryption and Authentication are both key structures in TLS (Transport Layer Security) / SSL (Secure Sockets Layer) protocol (Developers, HTTP: MDN). HTTP also provides mechanisms for identifying and retrieving web resources through URI (Uniform Resource Identifiers) (Berners-Lee et al., 2005).
+        </p>
+    </div>
+    <!-- My image with the correct size -->
+     <img src="images/HTTP.jpg" alt="HTTP (Rubin, 2018)">
+     <div class="footer">
+        <p>This is a class project for IT3203. Visit the <a href="https://ksuweb.github.io/IT3203/" style="color:white;">course website</a>.</p>
+    </div>
 </body>
 </html>

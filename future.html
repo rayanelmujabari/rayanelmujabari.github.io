@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>HTTP Research Homepage</title>
-    </head>
-    <style>
+    <!-- forgot meta in first milestone -->
+     <meta charset="UTF-8">
+     <!-- I am making sure the website fits different devices. I found this on w3 schools. -->
+     <meta name="viewport" content=" width= device-width, initial-scale=1.0">
+     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
@@ -35,7 +38,7 @@
         
         .content {
             background-color: white;
-            padding: 10px;
+            padding: 20px;
             margin-top: 15px;
         }
 
@@ -46,16 +49,37 @@
             padding: 10px;
             margin-top: 15px;
         }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid pink;
+            color: pink;
+            padding: 8px;
+        }
+
+        th {
+            background-color: pink;
+            color:white;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
     </style>
-    <!-- Style is still the same -->
 </head>
-<body>
+
     <div class="header">
-        <h1> HTTP Research Project </h1>
+        <!-- Header -->
+        <h1> HTTP's futur </h1>
     </div>
 
     <div class="menu">
-        <!-- Menu customized ofr easier navigation-->
         <a href="index.html">Home</a>
         <a href="role.html">HTTP's Role</a>
         <a href="past.html">HTTP's Past</a>
@@ -64,24 +88,23 @@
         <a href="quiz.html">Quiz</a>
         <a href="ref.html">Refrences</a>
     </div>
-</body>
-
+    
 <div class="content">
     <!-- Paragraphs are organized, but could use more spacing. -->
-    <h3> What is the future of HTTP?</h3>
-    <p> 
-The future of HTTP is being shaped by both emerging vulnerabilities and performance optimizations. Recent attacks like the HTTP 2 Rapid Reset flaw, which allowed massive denial-of-service (DDoS) attacks by canceling requests midstream, highlight ongoing security challenges in protocol design (Newman, 2023). This vulnerability underlines the need for more strong protocol executions, particularly as HTTP 3 and QUIC acceptance increases. HTTP 3's mandatory encryption and improved stream multiplexing could mitigate some of these risks while offering performance benefits (Bishop, 2022). Performance remains an important focus, with research proving that QUIC (Quick UDP Internet Connections), the transport layer for HTTP 3 reduces inactivity by up to 30% compared to TCP (Transmission Control Protocol)-based HTTP 2 in unstable network conditions (King & Wang, 2022). Further improvements are being explored, including adaptive congestion control and smarter retransmission policies, which could make HTTP even more efficient for real-time applications (Vogel et al., 2024). Additionally, proposals for integrating machine learning into HTTP routing decisions imply a future where protocols dynamically adjust based on network conditions (Kishnani & Das, 2024).</p>
-
-<h3>What are some trends goinf on in HTTP? </h3>
-<p>
-Security and decentralization are also critical trends. The shift toward fully encrypted HTTP 3 traffic prevents passive surveillance, but new challenges happen in traffic analysis and deep inspection. The experiments with decentralized web protocols (e.g., integrating HTTP with peer-to-peer networks) could redefine content delivery (Bishop, 2022). However, widespread adoption of HTTP/3 still faces hurdles, including enterprise firewall restrictions and legacy system compatibility (Vogel et al., 2024).</p>
-
-<h3> Is HTTP still changing? </h3>
-<p>
-HTTP’s evolution will depend on balancing performance gains with security strength. As weaknesses like HTTP 2 Rapid Reset demonstrate, protocol designers must anticipate these issues while enabling faster, more reliable web communication. The next generation of HTTP will likely emphasize adaptive, encrypted, and reorganized designs to meet these demands.</p>
-
-<div class="footer">
-    <p>This is a class project for IT3203. Visit the <a href="https://ksuweb.github.io/IT3203/" style="color:white;">course website</a>.</p>
+     <h3> What is the future of HTTP?</h3>
+     <p>
+        The future of HTTP is being shaped by both emerging vulnerabilities and performance optimizations. Recent attacks like the HTTP 2 Rapid Reset flaw, which allowed massive denial-of-service (DDoS) attacks by canceling requests midstream, highlight ongoing security challenges in protocol design (Newman, 2023). This vulnerability underlines the need for more strong protocol executions, particularly as HTTP 3 and QUIC acceptance increases. HTTP 3's mandatory encryption and improved stream multiplexing could mitigate some of these risks while offering performance benefits (Bishop, 2022). Performance remains an important focus, with research proving that QUIC (Quick UDP Internet Connections), the transport layer for HTTP 3 reduces inactivity by up to 30% compared to TCP (Transmission Control Protocol)-based HTTP 2 in unstable network conditions (King & Wang, 2022). Further improvements are being explored, including adaptive congestion control and smarter retransmission policies, which could make HTTP even more efficient for real-time applications (Vogel et al., 2024). Additionally, proposals for integrating machine learning into HTTP routing decisions imply a future where protocols dynamically adjust based on network conditions (Kishnani & Das, 2024).</p>
+        
+    <h3> What are some trends going on in HTTP? </h3>
+    <p>
+        Security and decentralization are also critical trends. The shift toward fully encrypted HTTP 3 traffic prevents passive surveillance, but new challenges happen in traffic analysis and deep inspection. The experiments with decentralized web protocols (e.g., integrating HTTP with peer-to-peer networks) could redefine content delivery (Bishop, 2022). However, widespread adoption of HTTP/3 still faces hurdles, including enterprise firewall restrictions and legacy system compatibility (Vogel et al., 2024).</p>
+    
+    <h3> Is HTTP still changing? </h3>
+    <p>
+        HTTP’s evolution will depend on balancing performance gains with security strength. As weaknesses like HTTP 2 Rapid Reset demonstrate, protocol designers must anticipate these issues while enabling faster, more reliable web communication. The next generation of HTTP will likely emphasize adaptive, encrypted, and reorganized designs to meet these demands.</p>
+</div>
+    <div class="footer">
+    <p> This is a class project for IT3203. Visit the <a href="https://ksuweb.github.io/IT3203/" style="color:white;">course website</a>.</p>
 </div>
 </body>
 </html>

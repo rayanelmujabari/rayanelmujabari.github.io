@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>HTTP Research Homepage</title>
-    </head>
-    <style>
+    <!-- forgot meta in first milestone -->
+     <meta charset="UTF-8">
+     <!-- I am making sure the website fits different devices. I found this on w3 schools. -->
+     <meta name="viewport" content=" width= device-width, initial-scale=1.0">
+     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
             color: pink;
-            background-color:white;
+            background-color: lightpink;
         }
 
         .header {
@@ -60,10 +63,11 @@
         }
         .options {
             color: white;
+            background-color: lightpink;
             margin-bottom: 10px;
         }
         input[type="text"] {
-            color: white;
+            color: pink;
             margin-bottom: 10px;
         }
         button{
@@ -80,7 +84,7 @@
         }
         
         .correct{
-            color: white;
+            color: pink;
             margin-bottom: 10px;
         }
         .incorrect{
@@ -100,34 +104,72 @@
             color: white;
             margin-bottom: 10px;
         }
-    </style>
-    <!-- Style is the same throughot all pages -->
-</head>
-<body>
-    <div class="header">
-        <h1> HTTP Knowlage Quiz </h1>
-    </div>
-
-    <!-- my menu at the top -->
-    <div class="menu">
-        <a href="index.html">Home</a>
-        <a href="role.html">HTTP's Role</a>
-        <a href="past.html">HTTP's Past</a>
-        <a href="present.html">HTTP's Present</a>
-        <a href="future.html">HTTP's future</a>
-        <a href="quiz.html">Quiz</a>
-        <a href="ref.html">Refrences</a>
-    </div>
-
-    <div class="content">
-        <form id="HTTPQuiz" class="quiz">
-            <div class="question">
-                <h2>1. What does HTTP stand for?</h2>
-                <div class="options">
-                    <label>
-
-                </div>
+        </style>
+        <!-- Style is the same throughot all pages -->
+        </head>
+        <body>
+            <div class="header">
+                <h1> HTTP Knowlage Quiz </h1>
             </div>
+            <!-- my menu at the top -->
+             <div class="menu">
+                <a href="index.html">Home</a>
+                <a href="role.html">HTTP's Role</a>
+                <a href="past.html">HTTP's Past</a>
+                <a href="present.html">HTTP's Present</a>
+                <a href="future.html">HTTP's future</a>
+                <a href="quiz.html">Quiz</a>
+                <a href="ref.html">Refrences</a>
+            </div>
+            
+            <div class="content">
+                <!-- Form article taken from w3 schools and used to specify what form the input belongs to-->
+                <form id="HTTPQuiz" class="quiz">
+                    <div class="question">
+                        <h2>1. What does HTTP stand for?</h2>
+                        <div class="options">
+                            <!-- Input type radio lets the user only pick one of the choices, this was taken from w3 schools-->
+                            <label><input type="radio>" name="question1" value="a" > Hyper Text Transfer protocol <!-- correct answer -->
+                            <label><input type="radio>" name="question1" value="b"> Hyper Tunnel Transfer Protocol
+                            <label><input type="radio>" name="question1" value="c"> Hyper Transfer Protocol
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <h2>2. What is one company that has contributed to the growth of HTTP? </h2>
+                        <div class="options">
+                        <label><input type="radio>" name="question1" value="a" > Apple 
+                        <label><input type="radio>" name="question1" value="b" > Firefox
+                        <label><input type="radio>" name="question1" value="c" > Google <!-- correct answer -->
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <h2>3. In what year did HTTP 3 standardize? </h2>
+                        <div class="options">
+                        <label><input type="radio>" name="question2" value="a" > 2023
+                        <label><input type="radio>" name="question2" value="b" > 2024 <!-- correct answer -->
+                        <label><input type="radio>" name="question2" value="c" > 2021
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <h2>3. In what year did HTTP 3 standardize? </h2>
+                        <div class="options">
+                        <label><input type="radio>" name="question3" value="a" > 2023
+                        <label><input type="radio>" name="question3" value="b" > 2024 <!-- correct answer -->
+                        <label><input type="radio>" name="question3" value="c" > 2021
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <h2>4. </h2>
+                        <div class="options">
+                        <input type="text name=question4"
+                        </div>
+                    </div>
+
+                    
 
 
 
