@@ -79,8 +79,6 @@
         }
         #Score {
             color: white;
-            /* fixes the line break in the score*/
-            display: inline-block;
         }
         
         .correct{
@@ -255,13 +253,13 @@
                             //selected.value sets or returns the value of the selected option in a list. I got htis from w3 schools.
                             if (selected.value === correctAnswers[question]) {
                                 score++
-                                resultsHTML += '<p class="correct">Question' + num + ':' + answerfeedback[question].correct + '</p>';
+                                resultsHTML += '<p class="correct">Question ' + num + ': ' + answerfeedback[question].correct + '</p>';
                             } else {
-                                resultsHTML += '<p class="incorrect">Question' + num + ':' + answerfeedback[question].incorrect + '</p>';
+                                resultsHTML += '<p class="incorrect">Question ' + num + ': ' + answerfeedback[question].incorrect + '</p>';
 
                             }
                         } else {
-                                resultsHTML += '<p class="incorrect">Question' + num + ': Not answered.' + answerfeedback[question].incorrect + '</p>';
+                                resultsHTML += '<p class="incorrect">Question ' + num + ' : Not answered.' + answerfeedback[question].incorrect + '</p>';
                             }
                     }
 
@@ -315,7 +313,7 @@
                 }
 
                 // .style.display is used to display an element
-                document.getElementById('score').style.display = 'block'
+                document.getElementById('score').style.display
             }
                 // reset quiz function to start over    
             function resetQuiz(){
