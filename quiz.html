@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>HTTP Research Homepage</title>
     <!-- forgot meta in first milestone -->
-     <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <title>HTTP Research Homepage</title>
      <!-- I am making sure the website fits different devices. I found this on w3 schools. -->
-     <meta name="viewport" content=" width= device-width, initial-scale=1.0">
+     <meta name="viewport" content=" width=device-width, initial-scale=1.0">
      <style>
         body {
             font-family: Arial, sans-serif;
@@ -67,49 +67,43 @@
             margin-bottom: 10px;
         }
         input[type="text"] {
-            color: pink;
+            color: black;
             margin-bottom: 10px;
         }
         button{
-            color: pink; 
+            color: black; 
             background-color: white;
         }
         button:hover {
-            color: white;
-            margin-bottom: 10px;
+            color: pink;
         }
-        score {
+        #Score {
             color: white;
-            margin-bottom: 10px;
+            /* fixes the line break in the score*/
+            display: inline-block;
         }
         
         .correct{
-            color: pink;
-            margin-bottom: 10px;
+            color: white;
         }
         .incorrect{
             color: white;
-            margin-bottom: 10px;
         }
         .feedback{
             color: white;
-            margin-bottom: 10px;
         }
         .pass{
             color: white;
-            margin-bottom: 10px;
-
         }
         .fail{
             color: white;
-            margin-bottom: 10px;
         }
         </style>
         <!-- Style is the same throughot all pages -->
         </head>
         <body>
             <div class="header">
-                <h1> HTTP Knowlage Quiz </h1>
+                <h1> HTTP Knowledge Quiz </h1>
             </div>
             <!-- my menu at the top -->
              <div class="menu">
@@ -129,27 +123,42 @@
                         <h2>1. What does HTTP stand for?</h2>
                         <div class="options">
                             <!-- Input type radio lets the user only pick one of the choices, this was taken from w3 schools-->
-                            <label><input type="radio" name="question1" value="a" > Hyper Text Transfer protocol <!-- correct answer -->
-                            <label><input type="radio" name="question1" value="b"> Hyper Tunnel Transfer Protocol
-                            <label><input type="radio" name="question1" value="c"> Hyper Transfer Protocol
+                            <label><input type="radio" name="question1" value="a" > Hyper Text Transfer protocol 
+                            </label><br> <!-- correct answer, <br> is break -->
+                            
+                            <label><input type="radio" name="question1" value="b"> Hyper Tunnel Transfer Protocol 
+                            </label><br>
+                            
+                            <label><input type="radio" name="question1" value="c"> Hyper Transfer Protocol 
+                            </label><br>
                         </div>
                     </div>
 
                     <div class="question">
                         <h2>2. What is one company that has contributed to the growth of HTTP? </h2>
                         <div class="options">
-                        <label><input type="radio" name="question2" value="a" > Apple 
-                        <label><input type="radio" name="question2" value="b" > Firefox
-                        <label><input type="radio" name="question2" value="c" > Google <!-- correct answer -->
+                        <label><input type="radio" name="question2" value="a"> Apple 
+                        </label><br>
+                        
+                        <label><input type="radio" name="question2" value="b"> Firefox 
+                        </label><br>
+                        
+                        <label><input type="radio" name="question2" value="c"> Google 
+                        </label><br> <!-- correct answer -->
                         </div>
                     </div>
 
                     <div class="question">
                         <h2>3. In what year did HTTP 3 standardize? </h2>
                         <div class="options">
-                        <label><input type="radio" name="question3" value="a" > 2023
-                        <label><input type="radio" name="question3" value="b" > 2024 <!-- correct answer -->
-                        <label><input type="radio" name="question3" value="c" > 2021
+                        <label><input type="radio" name="question3" value="a"> 2023 
+                        </label><br>
+                        
+                        <label><input type="radio" name="question3" value="b"> 2024 
+                        </label><br> <!-- correct answer -->
+                        
+                        <label><input type="radio" name="question3" value="c"> 2021
+                        </label><br>
                         </div>
                     </div>
 
@@ -164,33 +173,38 @@
                         <h2>5. Who has the development of HTTP been by? Select all that apply.  </h2>
                         <div class="options">
                             <!-- checkbox is used to select one or more of the options given -->
-                        <label><input type="checkbox" name="question5" value="a" > Google
+                        <label><input type="checkbox" name="question5" value="a" > Google 
+                        </label><br>
+                        
                         <label><input type="checkbox" name="question5" value="b" > Internet Engineering Task Force (IETF) 
-                        <label><input type="checkbox" name="question5" value="c" > World Wide Web Consortium (W3C) <!-- B and C are correct-->
+                        </label><br>
+                        
+                        <label><input type="checkbox" name="question5" value="c" > World Wide Web Consortium (W3C)
+                        </label><br> <!-- B and C are correct-->
                         </div>
                     </div>
                     <!-- a button that is able to be selected from w3 schools, submitquiz was used to simply submit the answers. I learned commands like this from CSE 1321, I thought I would try it here!-->
-                    <button type="button" onclick="submitQuiz()",> Submit Quiz</button>
+                    <button type="button" onclick="submitQuiz()">Submit Quiz</button>
                     <button type="reset"> Restart</button>
                 </form>
 
                 <div id="Score">
                     <h2>Quiz Results</h2>
                     <!-- Span can be used in html, css, and even javascript according to w3schools. It is used to mark up a part of text or a document.-->
-                    <p> Your score: <span id="score">0<</span>/5 </p>
-                    <p id="=score-message"></p>
+                    <p> Your score: <span id="score">0</span>/5</p>
+                    <p id="score-message"></p>
                     <div id="question-results"></div>
                     <!-- reset quiz is being used just like submit-->
-                    <button type="button" onclock="resetQuiz()">Restart Quiz</button>
+                    <button type="button" onclick="resetQuiz()">Restart Quiz</button>
                 </div>
-                
+            </div>
                 <div class="footer">
                     <p> This is a class project for IT3203. Visit the <a href="https://ksuweb.github.io/IT3203/" style="color:white;">course website</a>.</p>
             </div>
 
             <!-- Script is used in javascript-->
              <script>
-                <!--Const is a variable that cant be changed from w3schools javascript-->
+                //Const is a variable that cant be changed from w3schools javascript
                 const correctAnswers = {
                     question1: "a",
                     question2: "c",
@@ -241,49 +255,43 @@
                             //selected.value sets or returns the value of the selected option in a list. I got htis from w3 schools.
                             if (selected.value === correctAnswers[question]) {
                                 score++
-                                resultsHTML += '<p class="correct>Question' + num + ':' + answerfeedback[question].correct + '</p>';
-                            }
-                            
-                            else {
+                                resultsHTML += '<p class="correct">Question' + num + ':' + answerfeedback[question].correct + '</p>';
+                            } else {
                                 resultsHTML += '<p class="incorrect">Question' + num + ':' + answerfeedback[question].incorrect + '</p>';
 
                             }
-                        }
-                        else {
+                        } else {
                                 resultsHTML += '<p class="incorrect">Question' + num + ': Not answered.' + answerfeedback[question].incorrect + '</p>';
-
                             }
                     }
-                }
 
                 //Question 4 fill in the blank
 
-                const question4Answer = document.querySelector('input[name=question4]').value;
-                if( question4Answer === correctAnswers.question4){
+                const question4Answer = document.querySelector('input[name=question4]').value.trim();
+                // both .toLowerCase() and .trim format the tring but do not change it
+                if( question4Answer.toLowerCase() === correctAnswers.question4.toLowerCase()){
                     score++;
                     resultsHTML += '<p class="correct">Question 4: '+ answerfeedback.question4.correct + '</p>';
-                }
-                else {
+                } else {
                     resultsHTML += '<p class="incorrect">Question 4: '+ answerfeedback.question4.incorrect + '</p>';
                 }
                 
                 // Question 5 multiple answers could be selected
                 const question5Selected = [];
                 // .forEach() array  calls a function for each element in the array. I got this from w3 schools
-                document.querySelector('input[name=question5]:checked').forEach(checkbox => {
+                document.querySelectorAll('input[name="question5"]:checked').forEach(checkbox => {
                     //.push adds a new item to the end of an array
                     question5Selected.push(checkbox.value) 
                 });
 
                 const allcorrect = question5Selected.length === correctAnswers.question5.length && 
                 // the .every array executres a function for each array elelment from w3 schools
-                correctAnswers.question5.every(correctAnswers => question5Selected.includes(correctAnswers));
-                if (correct){
+                correctAnswers.question5.every(answer => question5Selected.includes(answer));
+                
+                if (allcorrect){
                     score++
                     resultsHTML += '<p class="correct">Question 5: '+ answerfeedback.question5.correct + '</p>';
-                }
-
-                else {
+                } else {
                 
                     resultsHTML += '<p class="incorrect">Question 5: '+ answerfeedback.question5.incorrect + '</p>';
 
@@ -300,9 +308,7 @@
                 if (score >= 4 ){
                     scoremessage.textContent = "You passed the quiz!"
                     scoremessage.className = "pass";
-                }
-                
-                else{
+                } else{
                 
                     scoremessage.textContent = "You did not pass the quiz."
                     scoremessage.className = "fail";
@@ -310,7 +316,7 @@
 
                 // .style.display is used to display an element
                 document.getElementById('score').style.display = 'block'
-            
+            }
                 // reset quiz function to start over    
             function resetQuiz(){
                 //.reset is used to resent the HTTPQuiz
@@ -318,9 +324,10 @@
                 document.getElementById('score').reset().style.display = 'none'
 
             }
-        </script>
-</body>
-</html>
+            </script>
+            
+        </body>
+        </html>
 
 
 
