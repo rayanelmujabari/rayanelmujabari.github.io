@@ -71,14 +71,15 @@
             margin-bottom: 10px;
         }
         button{
-            color: white;
+            color: pink; 
+            background-color: white;
             margin-bottom: 10px;
         }
         button:hover {
             color: white;
             margin-bottom: 10px;
         }
-        result {
+        score {
             color: white;
             margin-bottom: 10px;
         }
@@ -129,61 +130,73 @@
                         <h2>1. What does HTTP stand for?</h2>
                         <div class="options">
                             <!-- Input type radio lets the user only pick one of the choices, this was taken from w3 schools-->
-                            <label><input type="radio>" name="question1" value="a" > Hyper Text Transfer protocol <!-- correct answer -->
-                            <label><input type="radio>" name="question1" value="b"> Hyper Tunnel Transfer Protocol
-                            <label><input type="radio>" name="question1" value="c"> Hyper Transfer Protocol
+                            <label><input type="radio" name="question1" value="a" > Hyper Text Transfer protocol <!-- correct answer -->
+                            <label><input type="radio" name="question1" value="b"> Hyper Tunnel Transfer Protocol
+                            <label><input type="radio" name="question1" value="c"> Hyper Transfer Protocol
                         </div>
                     </div>
 
                     <div class="question">
                         <h2>2. What is one company that has contributed to the growth of HTTP? </h2>
                         <div class="options">
-                        <label><input type="radio>" name="question1" value="a" > Apple 
-                        <label><input type="radio>" name="question1" value="b" > Firefox
-                        <label><input type="radio>" name="question1" value="c" > Google <!-- correct answer -->
+                        <label><input type="radio" name="question1" value="a" > Apple 
+                        <label><input type="radio" name="question1" value="b" > Firefox
+                        <label><input type="radio" name="question1" value="c" > Google <!-- correct answer -->
                         </div>
                     </div>
 
                     <div class="question">
                         <h2>3. In what year did HTTP 3 standardize? </h2>
                         <div class="options">
-                        <label><input type="radio>" name="question2" value="a" > 2023
-                        <label><input type="radio>" name="question2" value="b" > 2024 <!-- correct answer -->
-                        <label><input type="radio>" name="question2" value="c" > 2021
+                        <label><input type="radio" name="question2" value="a" > 2023
+                        <label><input type="radio" name="question2" value="b" > 2024 <!-- correct answer -->
+                        <label><input type="radio" name="question2" value="c" > 2021
                         </div>
                     </div>
 
                     <div class="question">
                         <h2>3. In what year did HTTP 3 standardize? </h2>
                         <div class="options">
-                        <label><input type="radio>" name="question3" value="a" > 2023
-                        <label><input type="radio>" name="question3" value="b" > 2024 <!-- correct answer -->
-                        <label><input type="radio>" name="question3" value="c" > 2021
+                        <label><input type="radio" name="question3" value="a" > 2023
+                        <label><input type="radio" name="question3" value="b" > 2024 <!-- correct answer -->
+                        <label><input type="radio" name="question3" value="c" > 2021
                         </div>
                     </div>
 
                     <div class="question">
                         <h2>4. </h2>
                         <div class="options">
-                        <input type="text name=question4"
+                        <input type="text name=question4" placeholder="Your answer">
                         </div>
                     </div>
 
-                    
+                    <div class="question">
+                        <h2>5. </h2>
+                        <div class="options">
+                            <!-- checkbox is used to select one or more of the options given -->
+                        <label><input type="checkbox" name="question5" value="a" >
+                        <label><input type="checkbox" name="question5" value="b" >
+                        <label><input type="checkbox" name="question5" value="c" >
+                        </div>
+                    </div>
+                    <!-- a button that is able to be selected from w3 schools, submitquiz was used to simply submit the answers. I learned commands like this from CSE 1321, I thought I would try it here!-->
+                    <button type="button" onclick="submitQuiz()",> Submit Quiz</button>
+                    <button type="reset"> Restart</button>
+                </form>
 
-
-
-
-
-
-
-
-
-
-
-
-
-        </form>
+                <div id="Score">
+                    <h2>Quiz Results</h2>
+                    <!-- Span can be used in html, css, and even javascript according to w3schools. It is used to mark up a part of text or a document.-->
+                    <p> Your score: <span id="score">0<</span>/5 </p>
+                    <p id="=score message"></p>
+                    <div id="question results"></div>
+                    <!-- reset quiz is being used just like submit-->
+                    <button type="button" onclock="resetQuiz()">Restart Quiz</button>
+                </div>
+                
+                <div class="footer">
+                    <p> This is a class project for IT3203. Visit the <a href="https://ksuweb.github.io/IT3203/" style="color:white;">course website</a>.</p>
+                </div>
 
 
 
