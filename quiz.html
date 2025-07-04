@@ -256,17 +256,27 @@
                     }
                 }
 
-                //Question 4 
+                //Question 4 fill in the blank
 
                 const question4Answer = document.querySelector('input[name=question4]').value;
                 if( question4Answer === correctAnswers.question4){
                     score++;
-                    resultsHTML += '<p class="correct">Question 4: '+ answerfeedback[question4].correct + '</p>';
+                    resultsHTML += '<p class="correct">Question 4: '+ answerfeedback.question4.correct + '</p>';
                 }
                 else {
-                    resultsHTML += '<p class="incorrect">Question 4: '+ answerfeedback[question4].incorrect + '</p>';
+                    resultsHTML += '<p class="incorrect">Question 4: '+ answerfeedback.question4.incorrect + '</p>';
                 }
                 
+                // Question 5 multiple answers could be selected
+                const question5Selected = [];
+                // .forEach() array  calls a function for each element in the array. I got this from w3 schools
+                document.querySelector('input[name=question5]:checked').forEach(checkbox => {
+                    //.push adds a new item to the end of an array
+                    question5Selected.push(checkbox.value) 
+                });
+
+                const allcorrect = question5Selected.length === correctAnswers.question5.length 
+
              </script>
 
 
