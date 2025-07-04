@@ -53,7 +53,7 @@
             max-width: 800px;
             margin: 0;
         }
-        .questions {
+        .question {
             margin-bottom: 20px;
             padding-bottom: 15px;
         }
@@ -138,18 +138,9 @@
                     <div class="question">
                         <h2>2. What is one company that has contributed to the growth of HTTP? </h2>
                         <div class="options">
-                        <label><input type="radio" name="question1" value="a" > Apple 
-                        <label><input type="radio" name="question1" value="b" > Firefox
-                        <label><input type="radio" name="question1" value="c" > Google <!-- correct answer -->
-                        </div>
-                    </div>
-
-                    <div class="question">
-                        <h2>3. In what year did HTTP 3 standardize? </h2>
-                        <div class="options">
-                        <label><input type="radio" name="question2" value="a" > 2023
-                        <label><input type="radio" name="question2" value="b" > 2024 <!-- correct answer -->
-                        <label><input type="radio" name="question2" value="c" > 2021
+                        <label><input type="radio" name="question2" value="a" > Apple 
+                        <label><input type="radio" name="question2" value="b" > Firefox
+                        <label><input type="radio" name="question2" value="c" > Google <!-- correct answer -->
                         </div>
                     </div>
 
@@ -163,19 +154,19 @@
                     </div>
 
                     <div class="question">
-                        <h2>4. </h2>
+                        <h2>4. What type of protocol is HTTP? </h2>
                         <div class="options">
                         <input type="text name=question4" placeholder="Your answer">
                         </div>
                     </div>
 
                     <div class="question">
-                        <h2>5. </h2>
+                        <h2>5. Who has the development of HTTP been by? Select all that apply.  </h2>
                         <div class="options">
                             <!-- checkbox is used to select one or more of the options given -->
-                        <label><input type="checkbox" name="question5" value="a" >
-                        <label><input type="checkbox" name="question5" value="b" >
-                        <label><input type="checkbox" name="question5" value="c" >
+                        <label><input type="checkbox" name="question5" value="a" > Google
+                        <label><input type="checkbox" name="question5" value="b" > Internet Engineering Task Force (IETF) 
+                        <label><input type="checkbox" name="question5" value="c" > World Wide Web Consortium (W3C) <!-- B and C are correct-->
                         </div>
                     </div>
                     <!-- a button that is able to be selected from w3 schools, submitquiz was used to simply submit the answers. I learned commands like this from CSE 1321, I thought I would try it here!-->
@@ -195,7 +186,89 @@
                 
                 <div class="footer">
                     <p> This is a class project for IT3203. Visit the <a href="https://ksuweb.github.io/IT3203/" style="color:white;">course website</a>.</p>
-                </div>
+            </div>
+
+            <!-- Script is used in javascript-->
+             <script>
+                <!--Const is a variable that cant be changed from w3schools javascript-->
+                const correctAnswers = {
+                    question1: "a",
+                    question2: "c",
+                    question3: "b",
+                    question4: "Stateless",
+                    question5: ["b", "c"]
+                };
+
+                const answerfeedback = {
+                    question1: {
+                        correct: "Correct, HTTP stands for Hyper Text Transfer protocol.",
+                        incorrect: "Incorrect, HTTP stands for Hyper Text Transfer protocol. "
+                    },
+
+                    question2: {
+                        correct: "Correct, one company that has contributed to the growth of HTTP is Google.",
+                        incorrect:"Incorrect, one company that has contributed to the growth of HTTP is Google. "
+                    },
+
+                    question3: {
+                        correct: "Correct, HTTP standardized in 2024.",
+                        incorrect:"Incorrect, HTTP standardized in 2024"
+                    },
+
+                    question4: {
+                        correct: "Correct, HTTP is a stateless protocol.",
+                        incorrect:"Incorrect, HTTP is a stateless protocol."
+                    },
+
+                    question5: {
+                        correct: "Correct, The Internet Engineering Task Force (IETF) and World Wide Web Consortium (W3C) have mainly contributed to the development of HTTP.",
+                        incorrect:"Incorrect, The Internet Engineering Task Force (IETF) and World Wide Web Consortium (W3C) have mainly contributed to the development of HTTP. ."
+                    }
+                }
+                // function
+                function submitQuiz(){
+                    // let can be used in java to declare something in a specific block
+                    let score= 0
+                    let resultsHTML = "";
+
+                    // Questions 1-3 are single choice
+                    for (let num = 1; num <=3; num++) {
+                        const question = 'q' + num;
+                        //document.queryselector can be used to bring the first element that matches a CSS selector. I got this from w3schools. the + is used to combine my strings and variables
+                        const selected = document.querySelector('input[name="question' + num +'"] :checked');
+
+                        if (selected){
+                            //selected.value sets or returns the value of the selected option in a list. I got htis from w3 schools.
+                            if (selected.value == correctAnswers[question]) {
+                                score++
+                                resultsHTML += '<p class="correct>Question' + num + ':' + answerfeedback[question].correct + '</p>';
+                            }
+                            
+                            else {
+                                resultsHTML += '<p class="incorrect">Question' + num + ':' + answerfeedback[question].incorrect + '</p>';
+
+                            }
+                        }
+                        else {
+                                resultsHTML += '<p class="incorrect">Question' + num + ': Not answered.' + answerfeedback[question].incorrect + '</p>';
+
+                            }
+                    }
+                }
+
+                //Question 4 
+
+                const question4Answer = document.querySelector('input[name=question4]').value;
+                if( question4Answer === correctAnswers.question4){
+                    score++;
+                    resultsHTML += '<p class="correct">Question 4: '+ answerfeedback[question4].correct + '</p>';
+                }
+                else {
+                    resultsHTML += '<p class="incorrect">Question 4: '+ answerfeedback[question4].incorrect + '</p>';
+                }
+                
+             </script>
+
 
 
 
