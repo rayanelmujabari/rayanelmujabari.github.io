@@ -5,7 +5,7 @@ body {
 }
 
 #header {
-    background: pink;
+    background: rgb(185, 98, 113);
     color: white;
     padding: 10px;
     text-align: center;
@@ -17,13 +17,13 @@ body {
 }
 
 #menu a{
-    color: pink;
+    color: white;
     text-decoration: none;
     margin:  0 10px;
 }
 /* How i made the hover blue on my menu */
 #menu a :hover {
-    color: white;
+            color: lightpink; 
 }
 
 #content {
@@ -33,7 +33,7 @@ body {
 }
 /* TCustomized my footer background pink and made the link white */
 #footer {
-    background: pink;
+    background: rgb(185, 98, 113);
     color: white;
     text-align: center;
     padding: 5px;
