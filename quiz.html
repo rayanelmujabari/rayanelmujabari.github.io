@@ -4,7 +4,7 @@
     <!-- forgot meta in first milestone -->
     <meta charset="UTF-8">
     <title>HTTP Research Homepage</title>
-     <!-- I am making sure the website fits different devices. I found this on w3 schools. -->
+     <!-- I am making sure the website fits different devices. -->
      <meta name="viewport" content=" width=device-width, initial-scale=1.0">
      <style>
         body {
@@ -184,7 +184,8 @@
                     </div>
                     <!-- a button that is able to be selected from w3 schools, submitquiz was used to simply submit the answers. I learned commands like this from CSE 1321, I thought I would try it here!-->
                     <button type="button" onclick="submitQuiz()">Submit Quiz</button>
-                    <button type="reset"> Restart</button>
+                    <!-- reset quiz is being used just like submit-->
+                    <button type="button" onclick="resetQuiz()">Restart Quiz</button>
                 </form>
 
                 <div id="Score">
@@ -193,8 +194,6 @@
                     <p> Your score: <span id="score">0</span>/5</p>
                     <p id="score-message"></p>
                     <div id="question-results"></div>
-                    <!-- reset quiz is being used just like submit-->
-                    <button type="button" onclick="resetQuiz()">Restart Quiz</button>
                 </div>
             </div>
                 <div class="footer">
@@ -320,7 +319,12 @@
             function resetQuiz(){
                 //.reset is used to resent the HTTPQuiz
                 document.getElementById('HTTPQuiz').reset()
-                document.getElementById('score').reset().style.display = 'none'
+                document.getElementById('score').textContent = '0'
+                document.getElementById('question-results').innerHTML = ''
+                const scoremessage = document.getElementById('score-message')
+                scoremessage.textContent = ''
+                scoremessage.className = ''
+
 
             }
             </script>
